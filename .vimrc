@@ -16,6 +16,9 @@ filetype on
 filetype plugin indent on
 syntax on
 
+" pyflakes not use quickfix window
+" let g:pyflakes_use_quickfix = 0
+
 " Colors and Fornts
 set t_Co=256
 "colorscheme codeschool
@@ -36,6 +39,7 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 set number
 
 " Don't use tab but spaces change tab to 4 spaces
+set expandtab
 set tabstop=4
 set shiftwidth=4
 
@@ -82,3 +86,19 @@ let Tlist_Ctags_Cmd = "/Workspace/Bin/ctags"
 let Tlist_WinWidth = 50
 let Tlist_Use_Right_Window = 1
 map <F4> :TlistToggle<CR>
+
+" key map for NERDTree
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+
+" code folding
+set foldmethod=indent
+set foldlevel=99
+
+" rope configure
+map <leader>j :RopeGotoDefinition<CR>
+
+" Ack search
+nmap <leader>a <Esc>:Ack!
