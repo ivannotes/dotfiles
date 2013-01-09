@@ -1,11 +1,19 @@
 " Author: Ivan Lee
 " Created: 2012-10-26
+" 
+" Belows are how I build vim from source 
+" ./configure --prefix=dir_to_install --with-features=huge --enable-rubyinterp --enable-pythoninterp --enable-perlinterp --enable-cscope
+" make
+" make install
 
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
-
 " Mouse 
 set mouse=a
+
+set clipboard=unnamed
+
+set guifont=Courier\ New:h15
 
 " set leader
 let mapleader = ","
