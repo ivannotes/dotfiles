@@ -62,6 +62,7 @@ color wombat256mod
 set background=dark
 
 set encoding=utf8
+set fileencoding=utf8
 
 " auto load vimrc file
 autocmd FileType python set omnifunc=pythoncomplete#Complete
