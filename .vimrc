@@ -104,6 +104,13 @@ let ropevim_enable_shortcuts = 1
 let g:pymode_rope_goto_def_newwin = "vnew"
 let g:pymode_rope_extended_complete = 1
 
+" jedi
+let g:jedi#use_tabs_not_buffers = 0
+let g:jedi#popup_on_dot = 0
+let g:jedi#completions_enabled = 0
+let g:jedi#popup_select_first = 0
+let g:jedi#goto_assignments_command = ""
+
 let g:pymode_lint_write = 0
 
 let g:pymode_folding = 0
