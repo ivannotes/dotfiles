@@ -111,6 +111,7 @@ let g:jedi#popup_on_dot = 0
 "let g:jedi#completions_command = "<C-Space>"
 let g:jedi#popup_select_first = 0
 let g:jedi#goto_assignments_command = ""
+let g:jedi#show_call_signatures = "0"
 
 let g:pymode_lint_write = 0
 
