@@ -20,6 +20,10 @@ let mapleader = ","
 let g:mapleader = ","
 
 " Syntax highlighting
+" clear filetype flags before change runtimepath
+filetype off
+filetype plugin indent off
+set runtimepath+=/usr/local/go/misc/vim
 filetype on 
 filetype plugin indent on
 syntax on
