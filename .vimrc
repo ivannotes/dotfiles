@@ -27,6 +27,7 @@ set runtimepath+=/usr/local/go/misc/vim
 filetype on 
 filetype plugin indent on
 syntax on
+autocmd FileType go setlocal noexpandtab
 
 " highlight search string
 set hlsearch
