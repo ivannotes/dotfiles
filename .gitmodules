@@ -1,42 +1,42 @@
-[submodule "bundle/command-t"]
-	path = bundle/command-t
+[submodule "vim/bundle/command-t"]
+	path = vim/bundle/command-t
 	url = https://github.com/wincent/Command-T.git
-[submodule "bundle/ack"]
-	path = bundle/ack
+[submodule "vim/bundle/ack"]
+	path = vim/bundle/ack
 	url = https://github.com/mileszs/ack.vim.git
-[submodule "bundle/minibufexpl"]
-	path = bundle/minibufexpl
+[submodule "vim/bundle/minibufexpl"]
+	path = vim/bundle/minibufexpl
 	url = https://github.com/fholgado/minibufexpl.vim
-[submodule "bundle/nerdtree"]
-	path = bundle/nerdtree
+[submodule "vim/bundle/nerdtree"]
+	path = vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule "bundle/pep8"]
-	path = bundle/pep8
+[submodule "vim/bundle/pep8"]
+	path = vim/bundle/pep8
 	url = https://github.com/vim-scripts/pep8
-[submodule "bundle/pyflakes-pathogen"]
-	path = bundle/pyflakes-pathogen
+[submodule "vim/bundle/pyflakes-pathogen"]
+	path = vim/bundle/pyflakes-pathogen
 	url = https://github.com/mitechie/pyflakes-pathogen.git
-[submodule "bundle/rope"]
-	path = bundle/rope
+[submodule "vim/bundle/rope"]
+	path = vim/bundle/rope
 	url = https://github.com/klen/rope-vim
-[submodule "bundle/taglist"]
-	path = bundle/taglist
+[submodule "vim/bundle/taglist"]
+	path = vim/bundle/taglist
 	url = https://github.com/vim-scripts/taglist.vim.git
-[submodule "bundle/tlib"]
-	path = bundle/tlib
+[submodule "vim/bundle/tlib"]
+	path = vim/bundle/tlib
 	url = https://github.com/tomtom/tlib_vim.git
-[submodule "bundle/vim-addon-mw-utils"]
-	path = bundle/vim-addon-mw-utils
+[submodule "vim/bundle/vim-addon-mw-utils"]
+	path = vim/bundle/vim-addon-mw-utils
 	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
-[submodule "bundle/vim-powerline"]
-	path = bundle/vim-powerline
+[submodule "vim/bundle/vim-powerline"]
+	path = vim/bundle/vim-powerline
 	url = https://github.com/Lokaltog/vim-powerline.git
-[submodule "bundle/vim-snippets"]
-	path = bundle/vim-snippets
+[submodule "vim/bundle/vim-snippets"]
+	path = vim/bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets
-[submodule "bundle/vim-snipmate"]
-	path = bundle/vim-snipmate
+[submodule "vim/bundle/vim-snipmate"]
+	path = vim/bundle/vim-snipmate
 	url = https://github.com/garbas/vim-snipmate.git
-[submodule "bundle/jedi-vim"]
-	path = bundle/jedi-vim
+[submodule "vim/bundle/jedi-vim"]
+	path = vim/bundle/jedi-vim
 	url = https://github.com/davidhalter/jedi-vim
