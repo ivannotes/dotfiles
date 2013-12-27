@@ -1,0 +1,24 @@
+alias laptop 1
+alias big_screen 0
+
+alias hyper ctrl;shift;alt;cmd
+
+alias full        move screenOriginX;screenOriginY                  screenSizeX;screenSizeY
+alias lefthalf    move screenOriginX;screenOriginY                  screenSizeX/2;screenSizeY
+alias righthalf   move screenOriginX+screenSizeX/2;screenOriginY    screenSizeX/2;screenSizeY
+
+bind t:${hyper} focus 'Terminal'
+bind b:${hyper} focus 'Safari'
+bind e:${hyper} focus 'Evernote'
+bind s:${hyper} focus 'Sparrow'
+
+bind 3:${hyper} chain throw ${big_screen} resize | throw ${laptop} resize
+
+bind f:${hyper} ${full}
+bind h:${hyper} ${lefthalf}
+bind l:${hyper} ${righthalf}
+
+bind 1:ctrl relaunch
+
+bind 0:ctrl hint QWERTYUIOP
+bind 2:ctrl show 'Evernote'
