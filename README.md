@@ -1,4 +1,3 @@
-vimrc
+Dot files
 =====
-
-my vimrc file
+my dot files
