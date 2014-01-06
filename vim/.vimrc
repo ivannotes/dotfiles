@@ -148,9 +148,6 @@ set wildignore=*.pyc,*.pyo
 set foldmethod=indent
 set foldlevel=99
 
-" rope configure
-map <leader>j :RopeGotoDefinition<CR>
-
 " Ack search
 nmap <leader>a <Esc>:Ack!
 
@@ -158,3 +155,8 @@ nmap <leader>a <Esc>:Ack!
 "nmap <c-s> :update<CR>
 "vmap <c-s> <C-C>:update<CR>
 "imap <C-S> <C-O>:update<CR> 
+
+
+" Go define config
+let g:godef_split=0
+let g:godef_same_file_in_same_window=1
