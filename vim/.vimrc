@@ -160,3 +160,5 @@ nmap <leader>a <Esc>:Ack!
 " Go define config
 let g:godef_split=0
 let g:godef_same_file_in_same_window=1
+" Disable preview when using autocomplete
+set completeopt-=preview
