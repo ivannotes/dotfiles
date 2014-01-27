@@ -39,7 +39,7 @@ hi CursorLine cterm=None ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 hi CursorColumn cterm=None ctermfg=white guibg=white
 
 " pyflakes not use quickfix window
-" let g:pyflakes_use_quickfix = 0
+let g:pyflakes_use_quickfix = 0
 
 " Function for open and close quickfix window
 command -bang -nargs=? QFix call QFixToggle(<bang>0)
