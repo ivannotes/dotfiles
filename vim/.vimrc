@@ -140,6 +140,7 @@ map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
 let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
+map <leader>t :NERDTreeToggle<CR>
 
 " make Command-T to ignore .pyc files
 set wildignore=*.pyc,*.pyo
