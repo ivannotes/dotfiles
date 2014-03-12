@@ -71,6 +71,8 @@ set fileencoding=utf8
 
 " auto load vimrc file
 autocmd FileType python set omnifunc=pythoncomplete#Complete
+" disable use of included files in default completion
+set complete-=i
 
 " Showing line numbers and length
 set number
