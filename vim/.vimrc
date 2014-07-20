@@ -27,7 +27,6 @@ set runtimepath+=/usr/local/go/misc/vim
 filetype on 
 filetype plugin indent on
 syntax on
-autocmd FileType go setlocal noexpandtab
 
 " highlight search string
 set hlsearch
@@ -81,6 +80,7 @@ set number
 set expandtab
 set tabstop=4
 set shiftwidth=4
+autocmd FileType go setlocal noexpandtab
 
 " set auto load file when be edited by other program
 set autoread
