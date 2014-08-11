@@ -143,6 +143,8 @@ map <c-l> <c-w>l
 map <c-h> <c-w>h
 let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
 map <leader>t :NERDTreeToggle<CR>
+" find the current file in nerdtree panel
+map <leader>f :NERDTreeFind<CR>
 
 " make Command-T to ignore .pyc files
 set wildignore=*.pyc,*.pyo
