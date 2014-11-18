@@ -107,6 +107,7 @@ vnoremap > >gv
 " Setup Pathogen to manage vim plugins
 call pathogen#infect()
 map <Leader>g :call RopeGotoDefinition()<CR>
+map <Leader>s :call RopeShowDoc()<CR>
 let ropevim_enable_shortcuts = 1
 let g:pymode_rope_goto_def_newwin = "vnew"
 let g:pymode_rope_extended_complete = 1
@@ -135,6 +136,9 @@ let Tlist_WinWidth = 50
 let Tlist_Use_Right_Window = 1
 let Tlist_GainFocus_On_ToggleOpen = 1
 map <F4> :TlistToggle<CR>
+
+" copy file path to register
+map <F7> :let @+ = expand("%")<CR>
 
 " key map for NERDTree
 map <c-j> <c-w>j
