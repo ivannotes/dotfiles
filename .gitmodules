@@ -16,9 +16,6 @@
 [submodule "vim/bundle/pyflakes-pathogen"]
 	path = vim/bundle/pyflakes-pathogen
 	url = https://github.com/mitechie/pyflakes-pathogen.git
-[submodule "vim/bundle/rope"]
-	path = vim/bundle/rope
-	url = https://github.com/klen/rope-vim
 [submodule "vim/bundle/taglist"]
 	path = vim/bundle/taglist
 	url = https://github.com/vim-scripts/taglist.vim.git
