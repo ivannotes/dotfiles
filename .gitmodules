@@ -52,3 +52,12 @@
 [submodule "vim/bundle/tagbar"]
 	path = vim/bundle/tagbar
 	url = https://github.com/majutsushi/tagbar
+[submodule "vim/bundle/ropevim"]
+	path = vim/bundle/ropevim
+	url = https://github.com/python-rope/ropevim
+[submodule "vim/libs/python/ropevim"]
+	path = vim/libs/python/ropevim
+	url = https://github.com/python-rope/ropevim
+[submodule "vim/libs/python/ropemode"]
+	path = vim/libs/python/ropemode
+	url = https://github.com/python-rope/ropemode
