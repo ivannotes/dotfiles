@@ -166,7 +166,11 @@ set foldmethod=indent
 set foldlevel=99
 
 " Ack search
-nmap <leader>a <Esc>:Ack!
+" nmap <leader>a <Esc>:Ack!
+
+" Ag search
+nmap <leader>a <Esc>:Ag!
+nmap <leader>s :Ag --python <cword><CR>
 
 " Map Ctrl + s to save files
 "nmap <c-s> :update<CR>
