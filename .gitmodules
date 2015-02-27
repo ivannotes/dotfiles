@@ -58,6 +58,3 @@
 [submodule "vim/bundle/ag"]
 	path = vim/bundle/ag
 	url = https://github.com/rking/ag.vim
-[submodule "vim/bundle/the_silver_searcher"]
-	path = vim/bundle/the_silver_searcher
-	url = https://github.com/ggreer/the_silver_searcher
