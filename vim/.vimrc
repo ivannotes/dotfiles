@@ -158,8 +158,14 @@ map <leader>t :NERDTreeToggle<CR>
 " find the current file in nerdtree panel
 map <leader>f :NERDTreeFind<CR>
 
-" make Command-T to ignore .pyc files
-set wildignore=*.pyc,*.pyo
+" ctrlp options
+set wildignore+=*.pyc,*.pyo
+let g:ctrlp_custom_ignore = {
+    \ 'dir': '\v[\/](binary|aa_scraper|media)',
+    \ 'file': '\v\.(csv|xls)$',
+    \ }
+let g:ctrlp_by_filename = 1
+let g:ctrlp_max_files = 0
 
 " code folding
 set foldmethod=indent
