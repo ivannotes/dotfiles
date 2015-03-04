@@ -88,12 +88,6 @@ set autoread
 " search ignore character case
 set ignorecase
 
-" airline configure 
-" show status
-set laststatus=2
-" need font support in terminal
-"let g:airline_powerline_fonts = 1
-
 " Disable backup and swap files
 set nobackup
 set nowritebackup
@@ -116,6 +110,14 @@ autocmd FileType python setlocal omnifunc=RopeCompleteFunc
 "let g:ropevim_goto_def_newwin = 1
 "let ropevim_vim_completion = 1
 "let ropevim_extended_complete=1
+
+" airline configure
+" show status
+set laststatus=2
+" need font support in terminal
+"let g:airline_powerline_fonts = 1
+" disable tagbar
+let g:airline_section_x = airline#section#create_right(['filetype'])
 
 " jedi
 " temporary disable jedi because it's too slow
