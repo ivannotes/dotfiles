@@ -88,12 +88,11 @@ set autoread
 " search ignore character case
 set ignorecase
 
+" airline configure 
 " show status
 set laststatus=2
-" power line configure
-"set guifont=PowerlineSymbols\ for\ Pwerline
-"set nocompatible
-"let g:Powerline_symbols = 'fancy'
+" need font support in terminal
+"let g:airline_powerline_fonts = 1
 
 " Disable backup and swap files
 set nobackup

@@ -22,9 +22,6 @@
 [submodule "vim/bundle/vim-addon-mw-utils"]
 	path = vim/bundle/vim-addon-mw-utils
 	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
-[submodule "vim/bundle/vim-powerline"]
-	path = vim/bundle/vim-powerline
-	url = https://github.com/Lokaltog/vim-powerline.git
 [submodule "vim/bundle/vim-snippets"]
 	path = vim/bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets
@@ -58,3 +55,12 @@
 [submodule "vim/bundle/ag"]
 	path = vim/bundle/ag
 	url = https://github.com/rking/ag.vim
+[submodule "vim/bundle/vim-airline"]
+	path = vim/bundle/vim-airline
+	url = https://github.com/bling/vim-airline
+[submodule "vim/bundle/font"]
+	path = vim/bundle/font
+	url = https://github.com/powerline/fonts
+[submodule "vim/bundle/powerline-font"]
+	path = vim/bundle/powerline-font
+	url = https://github.com/powerline/fonts
