@@ -165,7 +165,7 @@ let g:ctrlp_custom_ignore = {
     \ 'dir': '\v[\/](binary|aa_scraper|media)',
     \ 'file': '\v\.(csv|xls)$',
     \ }
-let g:ctrlp_by_filename = 1
+"let g:ctrlp_by_filename = 1
 let g:ctrlp_max_files = 0
 
 " code folding
