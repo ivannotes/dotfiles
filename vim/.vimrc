@@ -21,6 +21,7 @@ let g:mapleader = ","
 
 " Syntax highlighting
 " clear filetype flags before change runtimepath
+
 filetype off
 filetype plugin indent off
 set runtimepath+=/usr/local/go/misc/vim
@@ -31,11 +32,12 @@ syntax on
 " highlight search string
 set hlsearch
 
-" highlight cursor
-set cursorline
-set cursorcolumn
-hi CursorLine cterm=None ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-hi CursorColumn cterm=None ctermfg=white guibg=white
+" disable cursorline because it slows typing
+"highlight cursor
+"set cursorline
+"set cursorcolumn
+"hi CursorLine cterm=None ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+"hi CursorColumn cterm=None ctermfg=white guibg=white
 
 " pyflakes not use quickfix window
 let g:pyflakes_use_quickfix = 0
