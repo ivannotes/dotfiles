@@ -80,7 +80,8 @@ a lot of `,` in the hot key of the following usage example
     vim-snippets [https://github.com/honza/vim-snippets](https://github.com/honza/vim-snippets)  
     Usage:  
     when you type some keyword following with tab you can automatically bring out the code snippets  
-    for example if you type ifmain and then following with a tab in a python file if will bring out
+    for example if you type ifmain and then following with a tab in a python file it will bring out
+    the following code
 
         if __name__ == '__main__':
             main()
