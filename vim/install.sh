@@ -7,8 +7,8 @@
 #git submodule init
 #git submodule update
 
-sudo pip install jedi
-sudo brew install ag
+pip install jedi
+brew install ag
 
 # install rope
 cd ~/.vim/libs/python/ropemode && sudo python setup.py install

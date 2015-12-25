@@ -139,10 +139,10 @@ let g:pymode_folding = 0
 " auto complete settings
 " autocmd FileType python set omnifunc=pythoncomplete#Complete
 " python ctags file
-set tags=/Workspace/Vim/tags/python/tags
+" set tags=/workspace/Vim/tags/python/tags
 
 " taglist settings
-let Tlist_Ctags_Cmd = "/Workspace/Bin/ctags"
+let Tlist_Ctags_Cmd = "/workspace/installs/ctags"
 let Tlist_WinWidth = 50
 let Tlist_Use_Right_Window = 1
 let Tlist_GainFocus_On_ToggleOpen = 1
