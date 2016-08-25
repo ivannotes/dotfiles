@@ -141,6 +141,10 @@ let g:pymode_folding = 0
 " python ctags file
 " set tags=/workspace/Vim/tags/python/tags
 
+
+" auto remove trailing space
+autocmd BufWritePre *.py :%s/\s\+$//e
+
 " taglist settings
 let Tlist_Ctags_Cmd = "/workspace/installs/ctags"
 let Tlist_WinWidth = 50
@@ -164,7 +168,7 @@ map <leader>f :NERDTreeFind<CR>
 " ctrlp options
 set wildignore+=*.pyc,*.pyo
 let g:ctrlp_custom_ignore = {
-    \ 'dir': '\v[\/](binary|aa_scraper|media)',
+    \ 'dir': '\v[\/](binary|node_modules|media|static_dist)',
     \ 'file': '\v\.(csv|xls)$',
     \ }
 "let g:ctrlp_by_filename = 1
@@ -178,6 +182,7 @@ set foldlevel=99
 " nmap <leader>a <Esc>:Ack!
 
 " Ag search
+let g:ag_prg='ag -S --nocolor --nogroup --column --ignore node_modules --ignore "*bundle*" --ignore "static_dist*" '
 nmap <leader>a <Esc>:Ag!
 nmap <leader>s :Ag --python <cword><CR>
 
@@ -221,3 +226,13 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
 \ }
 map <F3> :TagbarToggle<CR>
+
+" python with virtualenv support
+py << EOF
+import os
+import sys
+if 'VIRTUAL_ENV' in os.environ:
+  project_base_dir = os.environ['VIRTUAL_ENV']
+  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+  execfile(activate_this, dict(__file__=activate_this))
+EOF
