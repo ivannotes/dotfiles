@@ -64,3 +64,6 @@
 [submodule "vim/bundle/powerline-font"]
 	path = vim/bundle/powerline-font
 	url = https://github.com/powerline/fonts
+[submodule "vim/bundle/vim-surround"]
+	path = vim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround
