@@ -113,3 +113,13 @@ Tips
 *   shared register with system register  
     this means the text you copy from vim can been pasted to other program and the oppsite is also true
 *   `:qa` quit vim
+
+Intellij Vim
+============
+
+* Configure press and hold
+
+    # for ultimate version
+    defaults write com.jetbrains.intellij ApplePressAndHoldEnabled -bool false
+    # for community version
+    defaults write com.jetbrains.intellij.ce ApplePressAndHoldEnabled -bool false

@@ -83,6 +83,8 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 autocmd FileType go setlocal noexpandtab
+autocmd FileType javascript setlocal tabstop=2 shiftwidth=2
+autocmd FileType html setlocal tabstop=2 shiftwidth=2
 
 " set auto load file when be edited by other program
 set autoread

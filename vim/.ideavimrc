@@ -1,0 +1,33 @@
+let mapleader = ","
+let g:mapleader = ","
+
+set hlsearch
+set clipboard=unnamed
+set ignorecase smartcase
+set showmode
+set history=1000
+
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-h> <c-w>h
+nnoremap <c-k> <c-w>k
+
+" use :actionlist could list all available actions in intellij
+" use :action {Action} to test specific action in intellij
+
+" explorer code
+nnoremap <Leader>g :action GotoImplementation<cr>
+nnoremap <Leader>e :action FindUsages<cr>
+nnoremap <Leader>f :action SelectInProjectView<cr>
+nnoremap <Leader>t :action ActivateProjectToolWindow<cr>
+nnoremap <Leader>c :action ActivateTerminalToolWindow<cr>
+nnoremap <Leader>x :action IntroduceConstant<cr>
+nnoremap <Leader>h :action HideAllWindows<cr>
+nnoremap <Leader>w :action SearchEverywhere<cr>
+nnoremap <Leader>b :action RunClass<cr>
+
+nnoremap <Leader>o :action MethodHierarchy.OverrideMethodAction<cr>
+
+nnoremap / :action Find<cr>
+nnoremap <c-o> :action Back<cr>
+nnoremap <c-i> :action Forward<cr>
