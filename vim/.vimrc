@@ -86,6 +86,9 @@ autocmd FileType go setlocal noexpandtab
 autocmd FileType javascript setlocal tabstop=2 shiftwidth=2
 autocmd FileType html setlocal tabstop=2 shiftwidth=2
 
+noremap <Leader>r :Autoformat<CR>
+autocmd FileType javascript nnoremap <buffer> <Leader>r :Prettier<CR>
+
 " set auto load file when be edited by other program
 set autoread
 

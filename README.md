@@ -97,6 +97,13 @@ a lot of `,` in the hot key of the following usage example
     vim-yaml [https://github.com/stephpy/vim-yaml](https://github.com/stephpy/vim-yaml)  
     vim's built-in YAML support is almost useless, it's super slow so this plugin can make a difference
 
+Install Formatters
+------------------
+Install formatters could let you unlock auto formatting your code with hot key <leader> + r
+
+    npm install -g prettier
+    pip install yapf
+
 Tips
 ---------
 *   `f7` Copy current file path to system register
