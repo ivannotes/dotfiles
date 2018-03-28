@@ -112,6 +112,9 @@ vnoremap > >gv
 
 " Setup Pathogen to manage vim plugins
 call pathogen#infect()
+
+" exploring the code with hot key
+" Python
 autocmd FileType python map <Leader>g :call RopeGotoDefinition()<CR>
 autocmd FileType python map <Leader>s :call RopeShowDoc()<CR>
 let ropevim_enable_shortcuts = 0
