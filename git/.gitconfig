@@ -1,6 +1,8 @@
 [user]
-	name = Yi Li
-	email = amzyili@amazon.com
+	name = Ivan Lee
+	email = miracle.ivanlee@gmail.com
+    #name = Yi Li
+	#email = amzyili@amazon.com
 [core]
 	editor = vim
 	pager = less -FMRiX

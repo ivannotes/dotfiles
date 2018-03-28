@@ -84,10 +84,16 @@ set tabstop=4
 set shiftwidth=4
 autocmd FileType go setlocal noexpandtab
 autocmd FileType javascript setlocal tabstop=2 shiftwidth=2
+autocmd FileType scss setlocal tabstop=2 shiftwidth=2
 autocmd FileType html setlocal tabstop=2 shiftwidth=2
 
 noremap <Leader>r :Autoformat<CR>
 autocmd FileType javascript nnoremap <buffer> <Leader>r :Prettier<CR>
+autocmd FileType scss nnoremap <buffer> <Leader>r :Prettier<CR>
+
+" prettier configure
+let g:prettier#config#trailing_comma = 'none'
+let g:prettier#config#parser = 'babylon'
 
 " set auto load file when be edited by other program
 set autoread
@@ -106,8 +112,8 @@ vnoremap > >gv
 
 " Setup Pathogen to manage vim plugins
 call pathogen#infect()
-map <Leader>g :call RopeGotoDefinition()<CR>
-map <Leader>s :call RopeShowDoc()<CR>
+autocmd FileType python map <Leader>g :call RopeGotoDefinition()<CR>
+autocmd FileType python map <Leader>s :call RopeShowDoc()<CR>
 let ropevim_enable_shortcuts = 0
 autocmd FileType python setlocal omnifunc=RopeCompleteFunc
 "let ropevim_vim_completion=1
