@@ -1,14 +1,14 @@
 " Author: Ivan Lee
 " Created: 2012-10-26
-" 
-" Belows are how I build vim from source 
+"
+" Belows are how I build vim from source
 " ./configure --prefix=dir_to_install --with-features=huge --enable-rubyinterp --enable-pythoninterp --enable-perlinterp --enable-cscope
 " make
 " make install
 
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
-" Mouse 
+" Mouse
 set mouse=a
 
 set clipboard=unnamed
@@ -25,7 +25,7 @@ let g:mapleader = ","
 filetype off
 filetype plugin indent off
 set runtimepath+=/usr/local/go/misc/vim
-filetype on 
+filetype on
 filetype plugin indent on
 syntax on
 
@@ -61,7 +61,7 @@ set t_Co=256
 "colorscheme codeschool
 color wombat256mod
 "try
-"	colorscheme desert
+"   colorscheme desert
 "catch
 "endtry
 
@@ -115,10 +115,10 @@ call pathogen#infect()
 
 " exploring the code with hot key
 " Python
-autocmd FileType python map <Leader>g :call RopeGotoDefinition()<CR>
-autocmd FileType python map <Leader>s :call RopeShowDoc()<CR>
-let ropevim_enable_shortcuts = 0
-autocmd FileType python setlocal omnifunc=RopeCompleteFunc
+" autocmd FileType python map <Leader>g :call RopeGotoDefinition()<CR>
+" autocmd FileType python map <Leader>s :call RopeShowDoc()<CR>
+" let ropevim_enable_shortcuts = 0
+" autocmd FileType python setlocal omnifunc=RopeCompleteFunc
 "let ropevim_vim_completion=1
 "let ropevim_extended_complete=1
 "let g:pymode_rope_goto_def_newwin = "vnew"
@@ -138,13 +138,14 @@ let g:airline_section_x = airline#section#create_right(['filetype'])
 " jedi
 " temporary disable jedi because it's too slow
 " let g:jedi#auto_initialization = 0
-"let g:jedi#use_tabs_not_buffers = 0
-"let g:jedi#popup_on_dot = 0
-""let g:jedi#completions_enabled = 0
-"let g:jedi#completions_command = "<C-Space>"
-"let g:jedi#popup_select_first = 0
-"let g:jedi#goto_assignments_command = ""
-"let g:jedi#show_call_signatures = "0"
+let g:jedi#use_tabs_not_buffers = 0
+let g:jedi#popup_on_dot = 0
+"""let g:jedi#completions_enabled = 0
+let g:jedi#completions_command = "<C-Space>"
+""let g:jedi#popup_select_first = 0
+let g:jedi#goto_definitions_command = "<leader>g"
+let g:jedi#show_call_signatures = "0"
+let g:jedi#rename_command = "<leader>m"
 
 let g:pymode_lint_write = 0
 
@@ -182,9 +183,9 @@ map <leader>f :NERDTreeFind<CR>
 " ctrlp options
 set wildignore+=*.pyc,*.pyo
 let g:ctrlp_custom_ignore = {
-    \ 'dir': '\v[\/](binary|node_modules|media|static_dist)',
-    \ 'file': '\v\.(csv|xls)$',
-    \ }
+            \ 'dir': '\v[\/](binary|node_modules|media|static_dist)',
+            \ 'file': '\v\.(csv|xls)$',
+            \ }
 "let g:ctrlp_by_filename = 1
 let g:ctrlp_max_files = 0
 
@@ -203,7 +204,7 @@ nmap <leader>s :Ag --python <cword><CR>
 " Map Ctrl + s to save files
 "nmap <c-s> :update<CR>
 "vmap <c-s> <C-C>:update<CR>
-"imap <C-S> <C-O>:update<CR> 
+"imap <C-S> <C-O>:update<CR>
 
 
 " Go define config
@@ -213,32 +214,32 @@ let g:godef_same_file_in_same_window=1
 set completeopt-=preview
 " tar bar for go
 let g:tagbar_type_go = {
-    \ 'ctagstype' : 'go',
-    \ 'kinds'     : [
-        \ 'p:package',
-        \ 'i:imports:1',
-        \ 'c:constants',
-        \ 'v:variables',
-        \ 't:types',
-        \ 'n:interfaces',
-        \ 'w:fields',
-        \ 'e:embedded',
-        \ 'm:methods',
-        \ 'r:constructor',
-        \ 'f:functions'
-    \ ],
-    \ 'sro' : '.',
-    \ 'kind2scope' : {
-        \ 't' : 'ctype',
-        \ 'n' : 'ntype'
-    \ },
-    \ 'scope2kind' : {
-        \ 'ctype' : 't',
-        \ 'ntype' : 'n'
-    \ },
-    \ 'ctagsbin'  : 'gotags',
-    \ 'ctagsargs' : '-sort -silent'
-\ }
+            \ 'ctagstype' : 'go',
+            \ 'kinds'     : [
+            \ 'p:package',
+            \ 'i:imports:1',
+            \ 'c:constants',
+            \ 'v:variables',
+            \ 't:types',
+            \ 'n:interfaces',
+            \ 'w:fields',
+            \ 'e:embedded',
+            \ 'm:methods',
+            \ 'r:constructor',
+            \ 'f:functions'
+            \ ],
+            \ 'sro' : '.',
+            \ 'kind2scope' : {
+            \ 't' : 'ctype',
+            \ 'n' : 'ntype'
+            \ },
+            \ 'scope2kind' : {
+            \ 'ctype' : 't',
+            \ 'ntype' : 'n'
+            \ },
+            \ 'ctagsbin'  : 'gotags',
+            \ 'ctagsargs' : '-sort -silent'
+            \ }
 map <F3> :TagbarToggle<CR>
 
 " python with virtualenv support
@@ -246,7 +247,7 @@ py << EOF
 import os
 import sys
 if 'VIRTUAL_ENV' in os.environ:
-  project_base_dir = os.environ['VIRTUAL_ENV']
-  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-  execfile(activate_this, dict(__file__=activate_this))
+    project_base_dir = os.environ['VIRTUAL_ENV']
+    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+    execfile(activate_this, dict(__file__=activate_this))
 EOF

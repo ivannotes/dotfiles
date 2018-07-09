@@ -19,7 +19,7 @@ make sure you have "hg" installed
 
 *   Installation with huge set of features
 
-        $> ./configure --prefix={dir\_to\_install} --with-features=huge --enable-rubyinterp --enable-pythoninterp --enable-perlinterp --enable-cscope  
+        $> ./configure --prefix={dir\_to\_install} --with-features=huge --enable-rubyinterp --enable-pythoninterp --enable-python3interp --enable-perlinterp --enable-cscope  
         $> make  
         $> make install  
 
