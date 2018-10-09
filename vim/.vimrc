@@ -86,6 +86,7 @@ autocmd FileType go setlocal noexpandtab
 autocmd FileType javascript setlocal tabstop=2 shiftwidth=2
 autocmd FileType scss setlocal tabstop=2 shiftwidth=2
 autocmd FileType html setlocal tabstop=2 shiftwidth=2
+autocmd FileType ruby setlocal tabstop=2 shiftwidth=2
 
 noremap <Leader>r :Autoformat<CR>
 autocmd FileType javascript nnoremap <buffer> <Leader>r :Prettier<CR>
@@ -146,6 +147,9 @@ let g:jedi#completions_command = "<C-Space>"
 let g:jedi#goto_definitions_command = "<leader>g"
 let g:jedi#show_call_signatures = "0"
 let g:jedi#rename_command = "<leader>m"
+" force jedi use python 2 to make it consistent with it subprocess
+" otherwise pickle format will raise exception
+let g:jedi#force_py_version = 2
 
 let g:pymode_lint_write = 0
 
