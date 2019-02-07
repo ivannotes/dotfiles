@@ -16,6 +16,7 @@ cd ~/.vim/libs/python/ropevim && sudo python setup.py install
 
 # install js related stuff
 npm install -g js-beautify
+npm install -g typescript
 
 go get -v code.google.com/p/rog-go/exp/cmd/godef
 go install -v code.google.com/p/rog-go/exp/cmd/godef

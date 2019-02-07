@@ -13,7 +13,7 @@ set mouse=a
 
 set clipboard=unnamed
 
-set guifont=Courier\ New:h15
+set guifont=Courier\ New:h20
 
 " set leader
 let mapleader = ","
@@ -85,12 +85,16 @@ set shiftwidth=4
 autocmd FileType go setlocal noexpandtab
 autocmd FileType javascript setlocal tabstop=2 shiftwidth=2
 autocmd FileType scss setlocal tabstop=2 shiftwidth=2
+autocmd FileType less setlocal tabstop=2 shiftwidth=2
+autocmd FileType ts setlocal tabstop=2 shiftwidth=2
 autocmd FileType html setlocal tabstop=2 shiftwidth=2
 autocmd FileType ruby setlocal tabstop=2 shiftwidth=2
 
 noremap <Leader>r :Autoformat<CR>
 autocmd FileType javascript nnoremap <buffer> <Leader>r :Prettier<CR>
 autocmd FileType scss nnoremap <buffer> <Leader>r :Prettier<CR>
+
+let g:typescript_indent_disable = 1
 
 " prettier configure
 let g:prettier#config#trailing_comma = 'none'
@@ -118,6 +122,9 @@ call pathogen#infect()
 " Python
 " autocmd FileType python map <Leader>g :call RopeGotoDefinition()<CR>
 " autocmd FileType python map <Leader>s :call RopeShowDoc()<CR>
+
+autocmd FileType typescript map <Leader>g :TsuDefinition<CR>
+
 " let ropevim_enable_shortcuts = 0
 " autocmd FileType python setlocal omnifunc=RopeCompleteFunc
 "let ropevim_vim_completion=1
@@ -247,7 +254,7 @@ let g:tagbar_type_go = {
 map <F3> :TagbarToggle<CR>
 
 " python with virtualenv support
-py << EOF
+py3 << EOF
 import os
 import sys
 if 'VIRTUAL_ENV' in os.environ:
