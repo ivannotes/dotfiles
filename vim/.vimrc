@@ -86,7 +86,7 @@ autocmd FileType go setlocal noexpandtab
 autocmd FileType javascript setlocal tabstop=2 shiftwidth=2
 autocmd FileType scss setlocal tabstop=2 shiftwidth=2
 autocmd FileType less setlocal tabstop=2 shiftwidth=2
-autocmd FileType ts setlocal tabstop=2 shiftwidth=2
+autocmd FileType typescript setlocal tabstop=2 shiftwidth=2
 autocmd FileType html setlocal tabstop=2 shiftwidth=2
 autocmd FileType ruby setlocal tabstop=2 shiftwidth=2
 
@@ -94,7 +94,7 @@ noremap <Leader>r :Autoformat<CR>
 autocmd FileType javascript nnoremap <buffer> <Leader>r :Prettier<CR>
 autocmd FileType scss nnoremap <buffer> <Leader>r :Prettier<CR>
 
-let g:typescript_indent_disable = 1
+"let g:typescript_indent_disable = 1
 
 " prettier configure
 let g:prettier#config#trailing_comma = 'none'
@@ -156,7 +156,7 @@ let g:jedi#show_call_signatures = "0"
 let g:jedi#rename_command = "<leader>m"
 " force jedi use python 2 to make it consistent with it subprocess
 " otherwise pickle format will raise exception
-let g:jedi#force_py_version = 2
+let g:jedi#force_py_version = 3
 
 let g:pymode_lint_write = 0
 
