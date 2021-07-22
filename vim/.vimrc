@@ -116,7 +116,7 @@ vnoremap < <gv
 vnoremap > >gv
 
 " Setup Pathogen to manage vim plugins
-call pathogen#infect()
+" call pathogen#infect()
 
 " exploring the code with hot key
 " Python
@@ -127,6 +127,31 @@ autocmd FileType typescript map <Leader>g :TsuDefinition<CR>
 
 " let ropevim_enable_shortcuts = 0
 " autocmd FileType python setlocal omnifunc=RopeCompleteFunc
+"call pathogen#infect()
+" Setup Vim plugins
+call plug#begin('~/.vim/plugged')
+Plug 'rking/ag.vim'
+Plug 'kien/ctrlp.vim'
+Plug 'davidhalter/jedi-vim'
+Plug 'scrooloose/nerdtree'
+Plug 'fholgado/minibufexpl.vim'
+Plug 'powerline/fonts'
+Plug 'bling/vim-airline'
+Plug 'dgryski/vim-godef'
+
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
+
+Plug 'tpope/vim-surround'
+Plug 'leafgarland/typescript-vim'
+Plug 'Quramy/tsuquyomi'
+call plug#end()
+
+""map <Leader>g :call RopeGotoDefinition()<CR>
+""map <Leader>s :call RopeShowDoc()<CR>
+""let ropevim_enable_shortcuts = 0
+""autocmd FileType python setlocal omnifunc=RopeCompleteFunc
 "let ropevim_vim_completion=1
 "let ropevim_extended_complete=1
 "let g:pymode_rope_goto_def_newwin = "vnew"
@@ -134,6 +159,7 @@ autocmd FileType typescript map <Leader>g :TsuDefinition<CR>
 "let g:ropevim_goto_def_newwin = 1
 "let ropevim_vim_completion = 1
 "let ropevim_extended_complete=1
+let g:pymode_rope = 0
 
 " airline configure
 " show status
@@ -143,20 +169,25 @@ set laststatus=2
 " disable tagbar
 let g:airline_section_x = airline#section#create_right(['filetype'])
 
+" manually select the latest snip parser version to avoid warning message when
+" open vim
+let g:snipMate = { 'snippet_version' : 1 }
+
 " jedi
 " temporary disable jedi because it's too slow
 " let g:jedi#auto_initialization = 0
-let g:jedi#use_tabs_not_buffers = 0
-let g:jedi#popup_on_dot = 0
-"""let g:jedi#completions_enabled = 0
-let g:jedi#completions_command = "<C-Space>"
-""let g:jedi#popup_select_first = 0
-let g:jedi#goto_definitions_command = "<leader>g"
-let g:jedi#show_call_signatures = "0"
-let g:jedi#rename_command = "<leader>m"
-" force jedi use python 2 to make it consistent with it subprocess
-" otherwise pickle format will raise exception
-let g:jedi#force_py_version = 3
+"let g:jedi#use_tabs_not_buffers = 0
+"let g:jedi#popup_on_dot = 0
+""""let g:jedi#completions_enabled = 0
+"let g:jedi#completions_command = "<C-Space>"
+"""let g:jedi#popup_select_first = 0
+"let g:jedi#goto_definitions_command = "<leader>g"
+"let g:jedi#show_call_signatures = "0"
+"let g:jedi#rename_command = "<leader>m"
+"" force jedi use python 2 to make it consistent with it subprocess
+"" otherwise pickle format will raise exception
+"let g:jedi#force_py_version = 3
+
 
 let g:pymode_lint_write = 0
 
@@ -186,7 +217,7 @@ map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
-let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
+let NERDTreeIgnore = ['\.pyc$', '\.pyo$', 'node_modules']
 map <leader>t :NERDTreeToggle<CR>
 " find the current file in nerdtree panel
 map <leader>f :NERDTreeFind<CR>
@@ -253,12 +284,12 @@ let g:tagbar_type_go = {
             \ }
 map <F3> :TagbarToggle<CR>
 
-" python with virtualenv support
-py3 << EOF
-import os
-import sys
-if 'VIRTUAL_ENV' in os.environ:
-    project_base_dir = os.environ['VIRTUAL_ENV']
-    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-    execfile(activate_this, dict(__file__=activate_this))
-EOF
+"" python with virtualenv support
+"py3 << EOF
+"import os
+"import sys
+"if 'VIRTUAL_ENV' in os.environ:
+"    project_base_dir = os.environ['VIRTUAL_ENV']
+"    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+"    execfile(activate_this, dict(__file__=activate_this))
+"EOF
