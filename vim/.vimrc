@@ -146,6 +146,8 @@ Plug 'honza/vim-snippets'
 Plug 'tpope/vim-surround'
 Plug 'leafgarland/typescript-vim'
 Plug 'Quramy/tsuquyomi'
+Plug 'Chiel92/vim-autoformat'
+Plug 'prettier/vim-prettier'
 call plug#end()
 
 ""map <Leader>g :call RopeGotoDefinition()<CR>
