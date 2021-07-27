@@ -6,6 +6,31 @@
 " make
 " make install
 
+" Setup Vim plugins
+call plug#begin('~/.vim/plugged')
+Plug 'rking/ag.vim'
+Plug 'kien/ctrlp.vim'
+Plug 'davidhalter/jedi-vim'
+Plug 'scrooloose/nerdtree'
+Plug 'fholgado/minibufexpl.vim'
+Plug 'powerline/fonts'
+Plug 'bling/vim-airline'
+Plug 'dgryski/vim-godef'
+
+Plug 'MarcWeber/vim-addon-mw-utils'
+" Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
+
+Plug 'tpope/vim-surround'
+Plug 'leafgarland/typescript-vim'
+Plug 'Quramy/tsuquyomi'
+Plug 'Chiel92/vim-autoformat'
+Plug 'prettier/vim-prettier'
+Plug 'psf/black'
+Plug 'fisadev/vim-isort'
+call plug#end()
+
+
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
 " Mouse
@@ -93,6 +118,7 @@ autocmd FileType ruby setlocal tabstop=2 shiftwidth=2
 noremap <Leader>r :Autoformat<CR>
 autocmd FileType javascript nnoremap <buffer> <Leader>r :Prettier<CR>
 autocmd FileType scss nnoremap <buffer> <Leader>r :Prettier<CR>
+autocmd FileType python nnoremap <buffer> <Leader>r :Black<CR> :Isort<CR>
 
 "let g:typescript_indent_disable = 1
 
@@ -128,28 +154,6 @@ autocmd FileType typescript map <Leader>g :TsuDefinition<CR>
 " let ropevim_enable_shortcuts = 0
 " autocmd FileType python setlocal omnifunc=RopeCompleteFunc
 "call pathogen#infect()
-" Setup Vim plugins
-call plug#begin('~/.vim/plugged')
-Plug 'rking/ag.vim'
-Plug 'kien/ctrlp.vim'
-Plug 'davidhalter/jedi-vim'
-Plug 'scrooloose/nerdtree'
-Plug 'fholgado/minibufexpl.vim'
-Plug 'powerline/fonts'
-Plug 'bling/vim-airline'
-Plug 'dgryski/vim-godef'
-
-Plug 'MarcWeber/vim-addon-mw-utils'
-" Plug 'garbas/vim-snipmate'
-Plug 'honza/vim-snippets'
-
-Plug 'tpope/vim-surround'
-Plug 'leafgarland/typescript-vim'
-Plug 'Quramy/tsuquyomi'
-Plug 'Chiel92/vim-autoformat'
-Plug 'prettier/vim-prettier'
-call plug#end()
-
 ""map <Leader>g :call RopeGotoDefinition()<CR>
 ""map <Leader>s :call RopeShowDoc()<CR>
 ""let ropevim_enable_shortcuts = 0

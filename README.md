@@ -102,7 +102,10 @@ Install Formatters
 Install formatters could let you unlock auto formatting your code with hot key <leader> + r
 
     npm install -g prettier
-    pip install yapf
+    # sort python imports
+    pip install isort
+    # python code formatter
+    pip install black
 
 Tips
 ---------

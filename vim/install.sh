@@ -8,11 +8,11 @@
 #git submodule update
 
 pip install jedi
+# sort python imports
+pip install isort
+# python code formatter
+pip install black
 brew install ag
-
-# install rope
-cd ~/.vim/libs/python/ropemode && sudo python setup.py install
-cd ~/.vim/libs/python/ropevim && sudo python setup.py install
 
 # install js related stuff
 npm install -g js-beautify
