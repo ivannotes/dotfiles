@@ -189,7 +189,7 @@ let g:jedi#popup_on_dot = 0
 """let g:jedi#popup_select_first = 0
 let g:jedi#goto_definitions_command = "<leader>g"
 let g:jedi#show_call_signatures = "0"
-"let g:jedi#rename_command = "<leader>m"
+let g:jedi#rename_command = "<leader>m"
 "" force jedi use python 2 to make it consistent with it subprocess
 "" otherwise pickle format will raise exception
 "let g:jedi#force_py_version = 3
@@ -223,7 +223,7 @@ map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
-let NERDTreeIgnore = ['\.pyc$', '\.pyo$', 'node_modules']
+let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
 map <leader>t :NERDTreeToggle<CR>
 " find the current file in nerdtree panel
 map <leader>f :NERDTreeFind<CR>
